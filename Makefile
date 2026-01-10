@@ -1,29 +1,43 @@
 # Makefile for applock-macos
 # Build Touch ID gated app launcher
 
+PREFIX ?= /usr/local
+BIN_DIR = $(PREFIX)/bin
+
+# Prebuilt binary location
+PREBUILT = bin/applock
+
+# Source files (for building from source)
+SOURCES = Sources/applock.swift
+TARGET = applock
+
+# Swift compiler settings (requires Xcode for building from source)
 SWIFT = swiftc
-# Use Xcode's SDK if available (fixes toolchain mismatch issues)
 XCODE_SDK := $(shell xcrun --show-sdk-path 2>/dev/null)
 ifdef XCODE_SDK
 SWIFT_FLAGS = -O -whole-module-optimization -sdk $(XCODE_SDK)
 else
 SWIFT_FLAGS = -O -whole-module-optimization
 endif
-PREFIX ?= /usr/local
-BIN_DIR = $(PREFIX)/bin
 
-# Source files
-SOURCES = Sources/applock.swift
-TARGET = applock
+.PHONY: all install install-prebuilt build clean uninstall test help
 
-.PHONY: all build clean install uninstall test help
+all: install-prebuilt
 
-all: build
+# Default: install prebuilt binary (no Xcode needed)
+install-prebuilt: $(PREBUILT)
+	@echo "→ Installing prebuilt binary to $(BIN_DIR)..."
+	@mkdir -p $(BIN_DIR)
+	cp $(PREBUILT) $(BIN_DIR)/$(TARGET)
+	chmod +x $(BIN_DIR)/$(TARGET)
+	@echo "✓ Installed: $(BIN_DIR)/$(TARGET)"
 
-build: $(TARGET)
+# Alias for install-prebuilt
+install: install-prebuilt
 
-$(TARGET): $(SOURCES)
-	@echo "→ Building $(TARGET)..."
+# Build from source (requires Xcode)
+build: $(SOURCES)
+	@echo "→ Building $(TARGET) from source..."
 	$(SWIFT) $(SWIFT_FLAGS) -o $(TARGET) $(SOURCES)
 	@echo "✓ Build complete: $(TARGET)"
 

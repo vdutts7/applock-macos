@@ -1,0 +1,35 @@
+{
+  "repo": {
+    "name": "applock-macos",
+    "description": "Protect any macOS app behind Touch ID",
+    "homepage": "https://vd7.io",
+    "topics": ["macos", "touchid", "swift", "security", "biometrics"]
+  },
+  "owner": {
+    "github_username": "vdutts7",
+    "website": "https://vd7.io",
+    "twitter": "vaboratory"
+  },
+  "allowed_emails": [
+    "github.relock416@passmail.net",
+    "me@vd7.io"
+  ],
+  "social_preview": {
+    "title": "applock-macos",
+    "icons_dir": "assets/icons",
+    "icon_creator": "https://vd7.dev/icon-creator",
+    "dimensions": {
+      "width": 1280,
+      "height": 640
+    }
+  },
+  "cloudinary": {
+    "_note": "Reads from env vars: CLOUDINARY_CLOUD_NAME, CLOUDINARY_UPLOAD_PRESET",
+    "cloud_name": "$CLOUDINARY_CLOUD_NAME",
+    "upload_preset": "$CLOUDINARY_UPLOAD_PRESET"
+  },
+  "workflows": {
+    "auto_share_to_main": true,
+    "main_account": "vdutts7"
+  }
+}

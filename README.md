@@ -52,6 +52,13 @@ Touch ID prompt appears
 
 ## 💻How to build
 
+### Install via Homebrew (recommended)
+
+```bash
+brew tap vdutts7/tap
+brew install applock
+```
+
 ### Quick start (prebuilt binary)
 
 ```bash

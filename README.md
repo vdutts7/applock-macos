@@ -1,8 +1,34 @@
-# applock-macos
+<div align="center">
 
-Protect any macOS app behind Touch ID. Simple CLI tool that gates app launches with biometric authentication.
+<img src="https://res.cloudinary.com/dnz16usmk/image/upload/f_auto,q_auto/v1/vd7-website/touchid-logo" alt="Logo" width="80" height="80"/>
+<img src="https://res.cloudinary.com/dnz16usmk/image/upload/f_auto,q_auto/v1/vd7-website/swift-logo" alt="Logo" width="80" height="80"/>
 
-## What it does
+<h1 align="center">applock</h1>
+<p align="center">
+    <i><b>Protect any macOS app behind Touch ID 🔐</b></i>
+</p>
+
+[![Github][github]][github-url]
+
+</div>
+
+<br/>
+
+## Table of Contents
+
+<ol>
+    <a href="#about">📝 About</a><br/>
+    <a href="#how-to-build">💻 How to build</a><br/>
+    <a href="#next-steps">🚀 Next steps</a><br/>
+    <a href="#tools-used">🔧 Tools used</a><br/>
+    <a href="#contact">👤 Contact</a>
+</ol>
+
+<br/>
+
+## 📝About
+
+Gate any `.app` behind biometric auth - not just apps that natively support Touch ID.
 
 ```
 you type: applock Signal
@@ -13,102 +39,96 @@ Touch ID prompt appears
 ✗ failed → app stays closed
 ```
 
-## Why
+**Use cases:**
+- Signal, WhatsApp, Telegram behind biometrics
+- Password managers (1Password, Bitwarden)
+- Banking apps, crypto wallets
+- Anything you want locked
 
-- Keep sensitive apps (Signal, password managers, etc.) behind biometrics
-- Works with ANY `.app` - not just apps that support Touch ID natively
-- No daemon, no background process - just runs when you call it
+<br/>
 
-## Status
+## 💻How to build
 
-🚧 **Work in progress** - core functionality works, polish ongoing.
-
-## Requirements
-
-- macOS 10.12.2+ (Touch ID support)
-- Mac with Touch ID (MacBook Pro 2016+, or Apple Silicon Mac with Magic Keyboard)
-- Xcode Command Line Tools (for building)
-
-## Quick Start
+### Quick start (prebuilt binary)
 
 ```bash
-# Clone
 git clone https://github.com/vdutts7/applock-macos.git
 cd applock-macos
-
-# Install (prebuilt binary included)
 make install
-
-# Use
-applock /Applications/Signal.app
 ```
 
-> **Note:** Prebuilt universal binary (Intel + Apple Silicon) included in `bin/`. No Xcode required.
+> Prebuilt universal binary (Intel + Apple Silicon) included in `bin/`. No Xcode required.
 
-## Usage
+### Usage
 
 ```bash
-# Basic - protect an app
-applock /path/to/App.app
+# Basic
+applock /Applications/Signal.app
 
-# With custom prompt message
-applock /path/to/App.app "Unlock Signal"
+# With custom prompt
+applock /Applications/Signal.app "Unlock Signal"
 
-# Create an alias in your shell
+# Shell alias (add to .zshrc)
 alias signal="applock /Applications/Signal.app"
 ```
 
-## How it works
-
-1. `applock` binary uses macOS LocalAuthentication framework
-2. Prompts for Touch ID (falls back to password if configured)
-3. On success, opens the specified app
-4. On failure, exits with error code
-
-## Building from source (optional)
-
-If you want to build from source instead of using the prebuilt binary:
+### Build from source (optional)
 
 ```bash
-# Requires Xcode (not just Command Line Tools)
+# Requires Xcode
 make build
 
-# Or manually:
+# Or manually
 swiftc -O -o applock Sources/applock.swift
 ```
 
-Most users can skip this - the prebuilt binary in `bin/` works on any Mac.
+<details>
+<summary>Troubleshooting SDK mismatch</summary>
 
-## Project Structure
+If you get "failed to build module 'CoreFoundation'" error:
 
+```bash
+# Option 1: Reinstall Command Line Tools
+sudo rm -rf /Library/Developer/CommandLineTools
+xcode-select --install
+
+# Option 2: Point to Xcode SDK
+sudo xcode-select -s /Applications/Xcode.app/Contents/Developer
 ```
-applock-macos/
-├── Sources/
-│   └── applock.swift      # Main CLI tool (LocalAuthentication)
-├── Scripts/
-│   └── install.sh         # Installation script
-├── Makefile               # Build automation
-└── README.md
-```
+</details>
 
-## Security Notes
+<br/>
 
-- Uses `LAPolicy.deviceOwnerAuthenticationWithBiometrics` by default
-- Can fall back to device passcode if biometrics unavailable
-- No credentials stored - just gates the app launch
-- Ad-hoc signed (no Apple Developer ID required for personal use)
-
-## Roadmap
+## 🚀Next steps
 
 - [ ] Config file for protected apps list
-- [ ] Menubar app for quick access
+- [ ] Menubar app for quick access  
 - [ ] Auto-lock after timeout
-- [ ] Multiple authentication policies
+- [ ] Homebrew formula
 
-## License
+<br/>
 
-MIT
+## 🔧Tools Used
 
-## Author
+[![Swift][swift]][swift-url]
+[![macOS][macos]][macos-url]
 
-[@vdutts7](https://github.com/vdutts7) - [vd7.io](https://vd7.io)
+<br/>
+
+## 👤Contact
+
+[![Email][email]][email-url]
+[![Twitter][twitter]][twitter-url]
+
+<!-- MARKDOWN LINKS & IMAGES -->
+
+[swift]: https://img.shields.io/badge/Swift-FA7343?style=for-the-badge&logo=swift&logoColor=white
+[swift-url]: https://swift.org/
+[macos]: https://img.shields.io/badge/macOS_LocalAuthentication-000000?style=for-the-badge&logo=apple&logoColor=white
+[macos-url]: https://developer.apple.com/documentation/localauthentication
+[github]: https://img.shields.io/badge/💻Github-000000?style=for-the-badge
+[github-url]: https://github.com/vdutts7/applock-macos
+[email]: https://img.shields.io/badge/me@vd7.io-FFCA28?style=for-the-badge&logo=Gmail&logoColor=00bbff&color=black
+[email-url]: #
+[twitter]: https://img.shields.io/badge/Twitter-FFCA28?style=for-the-badge&logo=Twitter&logoColor=00bbff&color=black
+[twitter-url]: https://twitter.com/vdutts7/

@@ -1,14 +1,17 @@
 <div align="center">
 
-<img src="https://res.cloudinary.com/dnz16usmk/image/upload/f_auto,q_auto/v1/vd7-website/touchid-logo" alt="Logo" width="80" height="80"/>
-<img src="https://res.cloudinary.com/dnz16usmk/image/upload/f_auto,q_auto/v1/vd7-website/swift-logo" alt="Logo" width="80" height="80"/>
+<img src="https://res.cloudinary.com/ddyc1es5v/image/upload/v1768054074/gh-repos/applock-macos/apple.png" alt="logo" width="80" height="80"/>
+<img src="https://res.cloudinary.com/ddyc1es5v/image/upload/v1768054075/gh-repos/applock-macos/signal.png" alt="logo" width="80" height="80"/>
+<img src="https://res.cloudinary.com/ddyc1es5v/image/upload/v1768054076/gh-repos/applock-macos/touchid.png" alt="logo" width="80" height="80"/>
 
-<h1 align="center">applock</h1>
+<h1 align="center">applock-macos</h1>
 <p align="center">
     <i><b>Protect any macOS app behind Touch ID 🔐</b></i>
 </p>
 
 [![Github][github]][github-url]
+
+<img src="https://res.cloudinary.com/ddyc1es5v/image/upload/v1768054100/gh-repos/applock-macos/social-preview.png" />
 
 </div>
 

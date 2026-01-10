@@ -76,6 +76,19 @@ make build
 swiftc -O -o applock Sources/applock.swift
 ```
 
+### Troubleshooting Build Issues
+
+If you see SDK/toolchain mismatch errors:
+
+```bash
+# Option 1: Use Xcode's toolchain (if Xcode installed)
+sudo xcode-select -s /Applications/Xcode.app/Contents/Developer
+
+# Option 2: Reinstall Command Line Tools
+sudo rm -rf /Library/Developer/CommandLineTools
+xcode-select --install
+```
+
 ## Project Structure
 
 ```

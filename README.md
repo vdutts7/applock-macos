@@ -36,15 +36,14 @@ Touch ID prompt appears
 git clone https://github.com/vdutts7/applock-macos.git
 cd applock-macos
 
-# Build
-make
-
-# Install
+# Install (prebuilt binary included)
 make install
 
 # Use
 applock /Applications/Signal.app
 ```
+
+> **Note:** Prebuilt universal binary (Intel + Apple Silicon) included in `bin/`. No Xcode required.
 
 ## Usage
 
@@ -66,28 +65,19 @@ alias signal="applock /Applications/Signal.app"
 3. On success, opens the specified app
 4. On failure, exits with error code
 
-## Building from source
+## Building from source (optional)
+
+If you want to build from source instead of using the prebuilt binary:
 
 ```bash
-# Compile the Swift CLI
+# Requires Xcode (not just Command Line Tools)
 make build
 
 # Or manually:
 swiftc -O -o applock Sources/applock.swift
 ```
 
-### Troubleshooting Build Issues
-
-If you see SDK/toolchain mismatch errors:
-
-```bash
-# Option 1: Use Xcode's toolchain (if Xcode installed)
-sudo xcode-select -s /Applications/Xcode.app/Contents/Developer
-
-# Option 2: Reinstall Command Line Tools
-sudo rm -rf /Library/Developer/CommandLineTools
-xcode-select --install
-```
+Most users can skip this - the prebuilt binary in `bin/` works on any Mac.
 
 ## Project Structure
 

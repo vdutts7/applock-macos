@@ -2,7 +2,14 @@ import Foundation
 import LocalAuthentication
 
 /// applock - Touch ID gated app launcher for macOS
-/// Usage: applock <app_path> [reason]
+/// Author: vdutts7 (https://vd7.io)
+/// Source: https://github.com/vdutts7/applock-macos
+/// License: MIT
+
+let VERSION = "1.0.0"
+let AUTHOR = "vdutts7"
+let HOMEPAGE = "https://vd7.io"
+let REPO = "https://github.com/vdutts7/applock-macos"
 
 struct AppLock {
     
@@ -31,7 +38,9 @@ struct AppLock {
         }
         
         if appPath == "--version" || appPath == "-v" {
-            print("applock 1.0.0")
+            print("applock \(VERSION)")
+            print("Author: \(AUTHOR) (\(HOMEPAGE))")
+            print("Source: \(REPO)")
             exit(0)
         }
         
@@ -126,6 +135,9 @@ struct AppLock {
     static func printUsage() {
         let usage = """
         applock - Touch ID gated app launcher for macOS
+        
+        Author: \(AUTHOR) (\(HOMEPAGE))
+        Source: \(REPO)
         
         USAGE:
             applock <app_path> [reason]

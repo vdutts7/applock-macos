@@ -2,7 +2,13 @@
 # Build Touch ID gated app launcher
 
 SWIFT = swiftc
+# Use Xcode's SDK if available (fixes toolchain mismatch issues)
+XCODE_SDK := $(shell xcrun --show-sdk-path 2>/dev/null)
+ifdef XCODE_SDK
+SWIFT_FLAGS = -O -whole-module-optimization -sdk $(XCODE_SDK)
+else
 SWIFT_FLAGS = -O -whole-module-optimization
+endif
 PREFIX ?= /usr/local
 BIN_DIR = $(PREFIX)/bin
 

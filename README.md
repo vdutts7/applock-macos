@@ -1,8 +1,9 @@
 <div align="center">
 
-<img src="https://res.cloudinary.com/ddyc1es5v/image/upload/v1768054074/gh-repos/applock-macos/apple.png" alt="logo" width="80" height="80"/>
+<img src="https://raw.githubusercontent.com/vdutts7/webp/main/macos.webp" alt="logo" width="80" height="80" />
+<img src="https://raw.githubusercontent.com/vdutts7/webp/main/touchid.webp" alt="logo" width="80" height="80" />
 <img src="https://res.cloudinary.com/ddyc1es5v/image/upload/v1768054075/gh-repos/applock-macos/signal.png" alt="logo" width="80" height="80"/>
-<img src="https://res.cloudinary.com/ddyc1es5v/image/upload/v1768054076/gh-repos/applock-macos/touchid.png" alt="logo" width="80" height="80"/>
+
 
 <h1 align="center">applock-macos</h1>
 <p align="center"><i><b>Protect any macOS app behind Touch ID 🔐</b></i></p>

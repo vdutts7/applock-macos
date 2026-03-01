@@ -11,7 +11,7 @@
 [![Github][github]][github-url]
 [![Homebrew][homebrew]][homebrew-url]
 
-<img src="https://res.cloudinary.com/ddyc1es5v/image/upload/v1768054100/gh-repos/applock-macos/social-preview.png" />
+<img src="https://res.cloudinary.com/ddyc1es5v/image/upload/v1772376376/gh-repos/applock-macos/social-preview.png" />
 
 </div>
 

@@ -1,8 +1,8 @@
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/vdutts7/webp/refs/heads/main/macos-finder.webp" alt="logo" width="80" height="80" />
-<img src="https://raw.githubusercontent.com/vdutts7/webp/refs/heads/main/touchid.webp" alt="logo" width="80" height="80" />
-<img src="https://res.cloudinary.com/ddyc1es5v/image/upload/v1768054075/gh-repos/applock-macos/signal.png" alt="logo" width="80" height="80"/>
+<img src="https://raw.githubusercontent.com/vdutts7/squircle/main/webp/macos/macos-finder.webp" alt="logo" width="80" height="80" />
+<img src="https://raw.githubusercontent.com/vdutts7/squircle/main/webp/touchid.webp" alt="logo" width="80" height="80" />
+<img src="https://raw.githubusercontent.com/vdutts7/squircle/main/webp/signal.webp" alt="logo" width="80" height="80"/>
 
 
 <h1 align="center">applock-macos</h1>

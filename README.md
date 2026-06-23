@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/vdutts7/squircle/main/webp/macos/macos-finder.webp" alt="logo" width="80" height="80" />
+<img src="https://raw.githubusercontent.com/vdutts7/squircle/main/webp/macos.webp" alt="logo" width="80" height="80" />
 <img src="https://raw.githubusercontent.com/vdutts7/squircle/main/webp/touchid.webp" alt="logo" width="80" height="80" />
 <img src="https://raw.githubusercontent.com/vdutts7/squircle/main/webp/signal.webp" alt="logo" width="80" height="80"/>
 

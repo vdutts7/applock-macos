@@ -1,12 +1,9 @@
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/vdutts7/squircle/main/webp/macos.webp" alt="logo" width="80" height="80" />
-<img src="https://raw.githubusercontent.com/vdutts7/squircle/main/webp/touchid.webp" alt="logo" width="80" height="80" />
-<img src="https://raw.githubusercontent.com/vdutts7/squircle/main/webp/signal.webp" alt="logo" width="80" height="80"/>
+<img src="https://raw.githubusercontent.com/vdutts7/squircle/main/webp/apple-localauthentication.webp" alt="logo" width="80" height="80" />
 
-
-<h1 align="center">applock-macos</h1>
-<p align="center"><i><b>Protect any macOS app behind Touch ID 🔐</b></i></p>
+<h1 align="center">applock</h1>
+<p align="center"><i><b>protect any macOS app behind Touch ID 🔐</b></i></p>
 
 [![Github][github]][github-url]
 [![Homebrew][homebrew]][homebrew-url]
@@ -141,7 +138,7 @@ alias signal="applock /Applications/Signal.app"
 [homebrew-url]: https://github.com/vdutts7/homebrew-tap
 [swift]: https://img.shields.io/badge/Swift-FA7343?style=for-the-badge&logo=swift&logoColor=white
 [swift-url]: https://swift.org/
-[macos]: https://img.shields.io/badge/macOS_LocalAuthentication-000000?style=for-the-badge&logo=apple&logoColor=white
+[macos]: https://img.shields.io/badge/apple_LocalAuthentication-000000?style=for-the-badge&logo=apple&logoColor=white
 [macos-url]: https://developer.apple.com/documentation/localauthentication
 [email]: https://img.shields.io/badge/Email-000000?style=for-the-badge&logo=Gmail&logoColor=white
 [email-url]: mailto:me@vd7.io
